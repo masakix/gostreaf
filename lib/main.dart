@@ -62,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
               color: Colors.pink,
             ),
             RaisedButton(
-                  child: Text('次え'),
+                  child: Text('次へ'),
                   onPressed: () {
                     Navigator.push(
                       context,
