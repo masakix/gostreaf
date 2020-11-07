@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gostreaf/book_list_page.dart';
 
 import 'next_page.dart';
 
@@ -7,6 +8,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -70,6 +72,16 @@ class _MyHomePageState extends State<MyHomePage> {
                     );
                   },
                 ),
+            RaisedButton(
+                   child: Text('本一覧'),
+                   onPressed: () {
+                     Navigator.push(
+                       context,
+                       MaterialPageRoute(builder: (context) => BookList(),
+                       ),
+                     );
+                   },
+                 ),
           ],
         ),
         ),
