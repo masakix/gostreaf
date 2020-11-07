@@ -15,13 +15,13 @@ class BookList extends StatelessWidget {
          if (snapshot.hasError) return new Text('Error: ${snapshot.error}');
          switch (snapshot.connectionState) {
           case ConnectionState.waiting:
-            return new Text('Loding');
+            return Text('Loding');
           default:
-           return new ListView(
+           return ListView(
             children:
                snapshot.data.docs.map((DocumentSnapshot document) {
-               return new ListTile(
-                  title: new Text(document['title']),
+               return ListTile(
+                  title: Text(document['title']),
                  );
                 }).toList(),
                );
